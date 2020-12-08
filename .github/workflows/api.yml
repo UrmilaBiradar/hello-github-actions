@@ -1,20 +1,20 @@
-name: Manually triggered workflow
+name: Manually triggered workflow - first-action branch
 on:
   workflow_dispatch:
     inputs:
       name:
         description: 'Person to greet'
         required: true
-        default: 'Mona the Octocat'
+        default: 'Sona the Octocat'
       home:
         description: 'location'
         required: false
-        default: 'The Octoverse'
+        default: 'Octoverse'
 
 jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Hello ${{ github.event.inputs.name }}!"
+        echo "Hi ${{ github.event.inputs.name }}!"
         echo "- in ${{ github.event.inputs.home }}!"
