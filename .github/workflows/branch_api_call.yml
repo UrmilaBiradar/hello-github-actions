@@ -1,4 +1,4 @@
-name: create-a-workflow-dispatch-event
+name: API triggered workflow
 on:
   workflow_dispatch:
     inputs:
